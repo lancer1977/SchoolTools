@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+	<EnableDefaultEmbeddedResourceItems>false</EnableDefaultEmbeddedResourceItems>
+	<RootNamespace>PolyhydraGames.SchoolTools.Core</RootNamespace>
+	<AssemblyName>PolyhydraGames.SchoolTools.Core</AssemblyName>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DebugType></DebugType>
+    <DefineConstants>RELEASE;NETSTANDARD;NETSTANDARD2_0</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'"> 
+    <DefineConstants>TRACE;TEST2;DEBUG;NETSTANDARD;NETSTANDARD2_0</DefineConstants> 
+    <OutputPath>bin\Debug</OutputPath> 
+    <WarningsAsErrors></WarningsAsErrors> 
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="6.4.0" />
+    <PackageReference Include="PolyhydraGames.ClipboardMonitor" Version="1.0.4" />
+    <PackageReference Include="PolyhydraGames.Core.Global" Version="1.0.2.14" />
+    <PackageReference Include="PolyhydraGames.Core.Interfaces" Version="1.0.2.1" />
+    <PackageReference Include="PolyhydraGames.Core.IOC" Version="1.0.0.17" />
+    <PackageReference Include="PolyhydraGames.Core.IOC.Autofac" Version="1.0.0.21" />
+    <PackageReference Include="PolyhydraGames.Core.ReactiveUI" Version="1.0.0.7" />
+    <PackageReference Include="PolyhydraGames.Core.SQLite" Version="2.0.1.1" />
+    <PackageReference Include="PolyhydraGames.Extensions" Version="2.1.1.4" />
+    <PackageReference Include="PolyhydraGames.TextToSpeech" Version="1.0.2" />
+    <PackageReference Include="ReactiveUI" Version="18.3.1" />
+    <PackageReference Include="ReactiveUI.Fody" Version="18.3.1" />
+    <PackageReference Include="sqlite-net-pcl" Version="1.8.116" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Math\" />
+  </ItemGroup>
+</Project>
